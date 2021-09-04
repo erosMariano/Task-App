@@ -1,0 +1,218 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #1D1D26;
+    font-family: poppins;
+}
+
+.my-container{
+    position: relative;
+    height: 100vh;
+    color: #fff;
+    max-width: 1274px;
+    width: 100%;
+    margin: 0 auto;
+
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 50px;
+        padding: 0px 20px;
+
+        > div{
+            display: flex;
+        }
+
+        .logo{
+            align-items: center;
+            color: #fff;
+
+            img{
+                width: 30px;
+                margin-right: 10px;
+            }
+        }
+
+        .login{
+            
+            a{
+                color: #fff;
+                text-decoration: none;
+                display: inline-block;
+
+
+                border: 1px solid rgba(255, 255, 255, 0.18);
+                border-radius: 10px;
+                padding:10px 30px;
+
+                transition: all 0.3s;
+
+                &:hover{
+                    background: rgba(255, 255, 255, 0.18);
+                }
+            }
+
+            a:nth-child(1){
+                margin-right: 24px;
+                border: 1px solid transparent;
+                transition: all 0.3s;
+
+                &:hover{
+                    border: 1px solid rgba(255, 255, 255, 0.18);  
+                    background: transparent;
+                }
+            }
+        }
+    }
+
+    .texto-principal{
+        max-width: 434px;
+        margin: 0 auto;
+        text-align: center;
+
+
+
+        h1{
+            font-weight: 700;
+
+            span{
+                background-image: linear-gradient(46.68deg, #89349E -12.3%, #C244D8 14.23%, #FC73A3 78.78%, #FF9D7F 122.42%);
+                background-clip: text;
+                -webkit-background-clip: text; /* Alguns navegadores precisam do prefixo */
+              
+                /* Terceiro passo: apagar o texto, deixando apenas o fundo atrás dele */
+                -webkit-text-fill-color: transparent;
+              
+                /* Cor que contraste com o degradê, caso o navegador não suporte `background-clip: text` */
+                color: black;
+            }
+        }
+
+        p{
+            font-size:.8rem;
+            margin-top: 16px;
+            margin-bottom: 16px;
+        }
+
+        a{
+            display: inline-block;
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+            
+            width: 200px;
+            padding: 15px 15px;
+            border-radius: 8px;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid  transparent;
+            transition: all .3s;
+        
+            &:hover{
+                border: 1px solid rgba(255, 255, 255, 0.18);  
+                background: transparent;
+            }
+        }
+
+        a:nth-child(1){
+            background: linear-gradient(46.68deg, #89349E -12.3%, #C244D8 14.23%, #FC73A3 78.78%, #FF9D7F 122.42%);
+        }
+
+    }
+
+    aside{
+        position: relative;
+        max-width: 800px;
+        display:flex;
+        margin: 0 auto;
+
+     img{
+         width: 100%;
+     }   
+    }
+    
+    .circles{
+        z-index: -1;
+        overflow-y: hidden;
+        width: 100%;
+        height: 100vh;
+        position: absolute;
+
+        img{position: absolute; 
+            bottom: -150px;
+            animation: topAnimation 20s infinite linear;
+        }
+
+        @keyframes topAnimation {
+            0% {
+                bottom: -150px;
+                transform: rotate(0);
+              }
+              100% {
+                transform: rotate(360deg);
+                bottom: 1000px;
+              }
+              
+        }
+        .circle1{
+            right: 50px;
+            width: 70px;
+            animation-delay: 2s;
+
+        }
+
+        .circle2{
+            left: 180px;
+            width: 70px;
+            animation-delay: 5s;
+        }
+
+        .circle3{
+            left: 100px;
+            width: 120px;
+        }
+
+        .circle4{
+            right: 200px;
+            width: 70px;
+        }
+
+    }
+}
+@media (max-width:500px){
+            
+    .my-container header .login{
+        display:none;
+    }
+
+    .my-container{
+        .texto-principal{
+            h1{
+                font-size: 2rem;
+            }
+            p{
+                font-size: 1rem;
+            }
+            
+            width: 90%;
+
+            .cts-texto-principal{
+                display:flex;
+                flex-direction: column;
+                align-items: center;
+                margin-top: 36px;
+                a{
+                    margin-bottom: 20px;
+                }
+            }
+        }
+    }
+}
