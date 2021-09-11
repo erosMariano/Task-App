@@ -1,0 +1,154 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #1D1D26;
+    font-family: poppins;
+
+    height: 100vh;
+    display:flex;
+
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+
+.cadastro-login{
+    width: 400px;
+    text-align:center;    
+    color: #fff;
+    .ou{
+        margin: 24px 0;
+    }
+    h1{
+        font-size: 40px;
+        color: #fff;
+        margin-bottom:40px;
+    }
+
+    .btn-social{
+        border: 1px solid rgba(255,255,255, .18);
+        border-radius:15px;
+        font-size:20px;
+
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+
+        text-decoration: none;
+        color: #fff;
+
+        padding: 12px 0px;
+        margin-bottom: 20px;
+
+        transition: .3s;
+        
+        &:hover{
+            background: rgba(255, 255, 255, 0.18);
+        }
+        
+        img{
+            margin-right: 16px;
+            width: 20px;
+        }
+    }
+
+    form input{
+        font-size: 24px;
+        width: 100%;
+
+        padding: 12px 24px;
+        border: 1px solid rgba(255,255,255, .18);
+        border-radius:15px;
+
+        background-color:transparent;
+
+        margin-bottom: 20px;
+        color: #fff;
+    }
+
+    form input::placeholder{
+        color: rgba(255,255,255, .18);
+    }
+
+    form button[type="submit"]{
+        background: linear-gradient(45.57deg, #89349E 0%, #C244D8 19.89%, #FC73A3 68.29%, #FF9D7F 101.01%);        color: #fff;
+        font-weight: 700;
+        padding: 16px 0px;
+        width: 100%;
+
+        font-size: 20px;
+
+        border-radius: 15px;
+
+        border: none;
+    }
+
+    .criar-conta{
+        p{
+            color: rgba(255,255,255, .6);
+        }
+        a{
+            display: inline-block;
+            color: #fff;
+            text-emphasis: none;
+            font-weight: 700;
+            text-decoration: none;
+            margin-top: 8px;
+        }
+    }
+    
+}
+
+.circles{
+    z-index: -1;
+    overflow-y: hidden;
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+
+    img{position: absolute; 
+        bottom: -150px;
+        animation: topAnimation 20s infinite linear;
+    }
+
+    @keyframes topAnimation {
+        0% {
+            bottom: -150px;
+            transform: rotate(0);
+          }
+          100% {
+            transform: rotate(360deg);
+            bottom: 1000px;
+          }
+          
+    }
+    .circle1{
+        right: 50px;
+        width: 70px;
+        animation-delay: 2s;
+
+    }
+
+    .circle2{
+        left: 180px;
+        width: 70px;
+        animation-delay: 5s;
+    }
+
+    .circle3{
+        left: 100px;
+        width: 120px;
+    }
+
+    .circle4{
+        right: 200px;
+        width: 70px;
+    }
+
+}
